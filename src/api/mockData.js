@@ -1,5 +1,5 @@
 // Моковые данные напитков
-export const mockDrinks = [
+export const staticDrinks = [
   {
     id: '1',
     name: 'Эспрессо',

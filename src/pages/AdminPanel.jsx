@@ -13,6 +13,27 @@ export default function AdminPanel() {
   const [showForm, setShowForm] = useState(false);
   const [formData, setFormData] = useState({});
   const queryClient = useQueryClient();
+  const isDevelopment = import.meta.env.DEV;
+
+  // Баннер для Vercel
+  const VercelBanner = () => {
+    if (isDevelopment) return null;
+    
+    return (
+      <div className="bg-blue-100 border border-blue-400 rounded-lg p-4 mb-6">
+        <div className="flex items-center gap-3">
+          <span className="text-2xl">🌐</span>
+          <div>
+            <p className="font-semibold text-blue-800">Режим просмотра Vercel</p>
+            <p className="text-blue-700 text-sm">
+              На Vercel админ-панель работает в режиме демонстрации. 
+              Для полного функционала запустите приложение локально.
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  };
 
   // Загрузка напитков
   const { data: drinks = [], isLoading } = useQuery({
@@ -149,6 +170,9 @@ export default function AdminPanel() {
             Добавляйте, редактируйте и удаляйте кофейные напитки
           </p>
         </div>
+
+        {/* Баннер для Vercel */}
+        <VercelBanner />
 
         {/* Панель управления */}
         <Card className="mb-8 border-2 border-primary-gold/20">
