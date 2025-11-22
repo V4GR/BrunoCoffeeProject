@@ -127,7 +127,8 @@ export default function Layout({ children }) {
               </div>
             </div>
             <p className="font-mono text-xs text-primary-dark opacity-60 uppercase tracking-wider">
-              © 2024 • Создано с любовью к кофе
+               © 2025 • Создано с любовью к кофе<br />
+                Мнацаканян Ваге АА-22-08
             </p>
           </div>
         </div>
