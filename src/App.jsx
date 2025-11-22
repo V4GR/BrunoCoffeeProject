@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import DrinkDetails from './pages/DrinkDetail';
 import Favorites from './pages/Favorites';
 import Discovery from './pages/Discovery';
+import AdminPanel from './pages/AdminPanel';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -26,6 +27,7 @@ function App() {
             <Route path="/drink" element={<DrinkDetails />} />
             <Route path="/favorites" element={<Favorites />} />
             <Route path="/discovery" element={<Discovery />} />
+            <Route path="/admin" element={<AdminPanel />} />
           </Routes>
         </Layout>
       </Router>
