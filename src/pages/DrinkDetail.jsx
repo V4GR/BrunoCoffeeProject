@@ -11,6 +11,7 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { coffeeApi } from '@/api/coffeeApi';
 
+
 export default function DrinkDetails() {
   const queryClient = useQueryClient();
   const urlParams = new URLSearchParams(window.location.search);
@@ -94,14 +95,18 @@ export default function DrinkDetails() {
                 {/* Кнопка избранного */}
                 <Button
                   size="lg"
-                  className={`absolute top-6 right-6 w-14 h-14 rounded-2xl backdrop-blur-md transition-all duration-300 ${
+                  className={`absolute top-6 right-6 w-14 h-14 rounded-2xl backdrop-blur-md transition-all duration-300 z-10 border-2 ${
                     favorite
-                      ? 'bg-red-500 text-white hover:bg-red-600'
-                      : 'bg-white/80 text-neutral-slate hover:bg-white hover:text-red-500'
+                      ? 'bg-red-500 border-red-500 hover:bg-red-600'
+                      : 'bg-white/90 border-red-300 hover:bg-white'
                   }`}
                   onClick={() => toggleFavoriteMutation.mutate()}
                 >
-                  <Heart className={`w-6 h-6 ${favorite ? 'fill-current' : ''}`} strokeWidth={2} />
+                  {favorite ? (
+                    <span className="text-2xl text-white">❤</span>
+                  ) : (
+                    <span className="text-2xl text-red-500">♡</span>
+                  )}
                 </Button>
               </div>
             </div>

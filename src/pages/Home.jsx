@@ -143,7 +143,7 @@ export default function Home() {
                 <div className="font-display text-4xl font-bold text-primary-dark mb-2">
                   12
                 </div>
-                <div className="text-sm font-semibold text-primary-dark">Критериев выбора</div>
+                <div className="text-sm font-semibold text-primary-dark text-center">Критериев выбора</div>
               </div>
               <div className="bg-white rounded-3xl p-6 shadow-xl border-2 border-primary-gold/20 hover:border-primary-dark transition-all duration-300 hover:scale-105">
                 <div className="font-display text-4xl font-bold text-primary-dark mb-2">
